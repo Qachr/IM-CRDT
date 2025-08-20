@@ -402,7 +402,7 @@ func (thisCRDTDag *CRDTCLSetStateBasedDag) SendState() (string, TimeTuple) {
 				}
 			}
 		}
-
+		thisCRDTDag.lastSentValue.SetState.mergeState(thisCRDTDag.setValue.SetState)
 		return c.String(), times
 	} else {
 		return "", TimeTuple{}
@@ -410,16 +410,13 @@ func (thisCRDTDag *CRDTCLSetStateBasedDag) SendState() (string, TimeTuple) {
 }
 func (thisCRDTDag *CRDTCLSetStateBasedDag) Add(x string) {
 	thisCRDTDag.setValue.Add(x)
-
 }
 
 func (thisCRDTDag *CRDTCLSetStateBasedDag) Remove(x string) {
-
 	thisCRDTDag.setValue.Remove(x)
 }
 
 func Create_CRDTCLSetStateBasedDag(sys *IpfsLink.IpfsLink, cfg Config.IM_CRDTConfig) *CRDTCLSetStateBasedDag {
-
 	man := CRDTDag.Create_CRDTManager(sys, cfg.PeerName, cfg.BootstrapPeer, cfg.Encode, cfg.Measurement)
 	crdtSet := CRDTCLSetStateBasedDag{dag: &man, measurement: cfg.Measurement, setValue: Create_CRDTCLSetStateBased(sys)}
 	if cfg.BootstrapPeer == "" {

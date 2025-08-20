@@ -10,6 +10,7 @@ type IM_CRDTConfig struct {
 	PeerName         string
 	Mode             string
 	UpdatesNB        int
+	TotalNbUpdate    int
 	WaitTime         int
 	SyncTime         int
 	Updating         bool

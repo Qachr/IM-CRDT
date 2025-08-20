@@ -183,6 +183,7 @@ func (self CRDTManager) EncodeCid(s path.Resolved) EncodedStr {
 	x := EncodedStr{Str: b}
 	return x
 }
+
 func (self *CRDTManager) GetNodeFromEncodedCid(stringIn []EncodedStr) ([]string, error) {
 	ti := time.Now()
 	Cids := make([]cid.Cid, len(stringIn))
@@ -220,7 +221,7 @@ func (self *CRDTManager) GetNodeFromEncodedCid(stringIn []EncodedStr) ([]string,
 		// THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!
 		// THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!
 		// THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!
-		Files.WriteTo(fil, fstr) // TADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!
+		Files.WriteTo(fil, fstr)
 		// THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!! (botleneck for mispelling)25
 		// THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!
 		// THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!  THIS IS THE BOTTLENECK DIscuss about it !!!!!

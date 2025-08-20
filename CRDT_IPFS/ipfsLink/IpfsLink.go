@@ -400,18 +400,20 @@ func GetIPFS(ipfs *IpfsLink, cids []cid.Cid) ([]files.Node, error) {
 							files[i], _ = ipfs.IpfsCore.Unixfs().Get(cctx, ifacepath.IpfsPath(f.Node.Cid()))
 						} else {
 							err = errors.New("NIL :/")
+							file.WriteString(fmt.Sprintf("Could not get the CID %s, node is NIL \n", cids[i]))
 						}
 					}
 					if err != nil {
 						printErr("could not get file with CID - %s : %s", clocal, err)
 						errhapened = true
 					}
+
 					wg.Done()
 				}(index)
+
 			} else {
 				// It has been asked to be retrieved one by one
 				str_CID := cids[index]
-				file.WriteString(fmt.Sprintf("Asking the CID %s \n", str_CID))
 				cctx, _ := context.WithDeadline(ipfs.Ctx, time.Now().Add(time.Second*3000))
 				array_one := make([]cid.Cid, 1)
 				array_one[0] = str_CID

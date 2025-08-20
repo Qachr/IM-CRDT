@@ -437,6 +437,7 @@ func (thisCRDTDag *CRDTCLSetDeltaBasedDag) SendState() (string, TimeTuple) {
 			}
 		}
 
+		thisCRDTDag.lastSentValue.SetState.mergeState(thisCRDTDag.setValue.SetState)
 		return c.String(), times
 	} else {
 		return "", TimeTuple{}
