@@ -1,0 +1,22 @@
+Replica ID: 0f21ecae-82d4-4f85-ba8b-39e0d9115e5a
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [ADD] Added home of type dir under parent /: /home 
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [SYNC] from 127.0.0.1:8002 applied 2 ops
+[SYNC] served 2 operations to replica: 74b51cfb-98ca-4068-8853-4290360d37fc
+[ADD] Added docs of type dir under parent /home: /home/docs 
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [ADD] Added rename of type file under parent /home/docs/private: /home/docs/private/rename 
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [SYNC] served 0 operations to replica: 74b51cfb-98ca-4068-8853-4290360d37fc
+[SYNC] from 127.0.0.1:8002 applied 3 ops
+[SYNC] from 127.0.0.1:8002 applied 3 ops
+[SYNC] served 2 operations to replica: 74b51cfb-98ca-4068-8853-4290360d37fc
+Orphan node policy: reappear
+
+------------------FINAL TREE---------------
+[SYNC] served 0 operations to replica: 74b51cfb-98ca-4068-8853-4290360d37fc
+[SYNC] from 127.0.0.1:8002 applied 0 ops
+- Path: / [type: dir] with parent  (from replica: 0f21ecae-82d4-4f85-ba8b-39e0d9115e5a) Name: root
+  - Path: /home [type: dir] with parent / (from replica: 0f21ecae-82d4-4f85-ba8b-39e0d9115e5a) Name: home
+    - Path: /home/docs [type: dir] with parent /home (from replica: 0f21ecae-82d4-4f85-ba8b-39e0d9115e5a) Name: docs
+      - Path: /home/docs/private [type: dir] with parent /home/docs (from replica: 0f21ecae-82d4-4f85-ba8b-39e0d9115e5a) Name: private
+        - Path: /home/docs/private/rename [type: dir] with parent /home/docs/private (from replica: 74b51cfb-98ca-4068-8853-4290360d37fc) Name: rename
+        - Path: /home/docs/private/rename[0f21ecae] [type: file] with parent /home/docs/private (from replica: 0f21ecae-82d4-4f85-ba8b-39e0d9115e5a) Name: rename[0f21ecae]
+  - Path: /user [type: dir] with parent / (from replica: 74b51cfb-98ca-4068-8853-4290360d37fc) Name: user

@@ -1,0 +1,16 @@
+Replica ID: 3a1eb291-0d89-45a0-b3ab-d788a63b367d
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [ADD] Added user of type dir under parent /: /user 
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [ADD] Added private of type dir under parent /home/docs: /home/docs/private 
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [REMOVE] Removed /home/docs/private of type dir
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [SYNC] from 127.0.0.1:8001 applied 4 ops
+[SYNC] from 127.0.0.1:8001 applied 4 ops
+Default orphan node policy: skip
+
+------------------FINAL TREE---------------
+[SYNC] served 0 operations to replica: ea7ee9e7-e660-4e23-987d-c3a10aad27d4
+[SYNC] from 127.0.0.1:8001 applied 0 ops
+/home/docs/private/file1.txt removed by reattach orphans
+- Path: / [type: dir] with parent  (from replica: 3a1eb291-0d89-45a0-b3ab-d788a63b367d) Name: root
+  - Path: /user [type: dir] with parent / (from replica: 3a1eb291-0d89-45a0-b3ab-d788a63b367d) Name: user
+  - Path: /home [type: dir] with parent / (from replica: ea7ee9e7-e660-4e23-987d-c3a10aad27d4) Name: home
+    - Path: /home/docs [type: dir] with parent /home (from replica: ea7ee9e7-e660-4e23-987d-c3a10aad27d4) Name: docs

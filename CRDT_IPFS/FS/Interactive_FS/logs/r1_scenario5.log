@@ -1,0 +1,21 @@
+Replica ID: 6962713b-54fe-4da4-b518-73effa0039c2
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [ADD] Added home of type dir under parent /: /home 
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [SYNC] served 2 operations to replica: d2e2b5f8-1eaf-499f-9559-1d567a394725
+[SYNC] from 127.0.0.1:8002 applied 2 ops
+[ADD] Added docs of type dir under parent /home: /home/docs 
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [ADD] Added rename of type file under parent /home/docs/private: /home/docs/private/rename 
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [SYNC] from 127.0.0.1:8002 applied 3 ops
+[SYNC] from 127.0.0.1:8002 applied 3 ops
+[SYNC] served 0 operations to replica: d2e2b5f8-1eaf-499f-9559-1d567a394725
+[SYNC] served 0 operations to replica: d2e2b5f8-1eaf-499f-9559-1d567a394725
+Orphan node policy: reappear
+
+------------------FINAL TREE---------------
+[SYNC] from 127.0.0.1:8002 applied 0 ops
+[SYNC] served 0 operations to replica: d2e2b5f8-1eaf-499f-9559-1d567a394725
+- Path: / [type: dir] with parent  (from replica: 6962713b-54fe-4da4-b518-73effa0039c2) Name: root
+  - Path: /home [type: dir] with parent / (from replica: 6962713b-54fe-4da4-b518-73effa0039c2) Name: home
+    - Path: /home/docs [type: dir] with parent /home (from replica: 6962713b-54fe-4da4-b518-73effa0039c2) Name: docs
+      - Path: /home/docs/private [type: dir] with parent /home/docs (from replica: d2e2b5f8-1eaf-499f-9559-1d567a394725) Name: private
+        - Path: /home/docs/private/rename [type: file] with parent /home/docs/private (from replica: d2e2b5f8-1eaf-499f-9559-1d567a394725) Name: rename
+  - Path: /user [type: dir] with parent / (from replica: d2e2b5f8-1eaf-499f-9559-1d567a394725) Name: user

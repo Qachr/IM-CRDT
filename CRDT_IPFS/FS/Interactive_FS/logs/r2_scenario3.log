@@ -1,0 +1,19 @@
+Replica ID: 00962def-628a-4ffa-900d-f7118843264b
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [ADD] Added user of type dir under parent /: /user 
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [SYNC] served 2 operations to replica: 8b126b67-acbe-463d-8fec-df0021f58b82
+[SYNC] from 127.0.0.1:8001 applied 2 ops
+[ADD] Added private of type dir under parent /home/docs: /home/docs/private 
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [REMOVE] Removed /home/docs/private of type dir
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [SYNC] served 2 operations to replica: 8b126b67-acbe-463d-8fec-df0021f58b82
+[SYNC] served 2 operations to replica: 8b126b67-acbe-463d-8fec-df0021f58b82
+[SYNC] from 127.0.0.1:8001 applied 2 ops
+Orphan node policy: root
+
+------------------FINAL TREE---------------
+[SYNC] served 0 operations to replica: 8b126b67-acbe-463d-8fec-df0021f58b82
+[SYNC] from 127.0.0.1:8001 applied 0 ops
+- Path: / [type: dir] with parent  (from replica: 00962def-628a-4ffa-900d-f7118843264b) Name: root
+  - Path: /user [type: dir] with parent / (from replica: 00962def-628a-4ffa-900d-f7118843264b) Name: user
+  - Path: /home [type: dir] with parent / (from replica: 8b126b67-acbe-463d-8fec-df0021f58b82) Name: home
+    - Path: /home/docs [type: dir] with parent /home (from replica: 8b126b67-acbe-463d-8fec-df0021f58b82) Name: docs
+  - Path: /file1.txt [type: file] with parent / (from replica: 8b126b67-acbe-463d-8fec-df0021f58b82) Name: file1.txt

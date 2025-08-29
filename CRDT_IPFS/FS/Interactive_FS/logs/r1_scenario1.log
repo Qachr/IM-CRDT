@@ -1,0 +1,19 @@
+Replica ID: ea7ee9e7-e660-4e23-987d-c3a10aad27d4
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [ADD] Added home of type dir under parent /: /home 
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [ADD] Added docs of type dir under parent /home: /home/docs 
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): [ADD] Added file1.txt of type file under parent /home/docs/private: /home/docs/private/file1.txt 
+Enter command (add <path> <type> | remove <path> <type> | print | final (+policy)): 2025/08/29 15:55:17 Dial error: dial tcp 127.0.0.1:8002: connectex: No connection could be made because the target machine actively refused it.
+2025/08/29 15:55:17 Dial error: dial tcp 127.0.0.1:8002: connectex: No connection could be made because the target machine actively refused it.
+2025/08/29 15:55:17 Dial error: dial tcp 127.0.0.1:8002: connectex: No connection could be made because the target machine actively refused it.
+[SYNC] served 4 operations to replica: 3a1eb291-0d89-45a0-b3ab-d788a63b367d
+[SYNC] served 4 operations to replica: 3a1eb291-0d89-45a0-b3ab-d788a63b367d
+Default orphan node policy: skip
+
+------------------FINAL TREE---------------
+[SYNC] served 0 operations to replica: 3a1eb291-0d89-45a0-b3ab-d788a63b367d
+[SYNC] from 127.0.0.1:8002 applied 0 ops
+/home/docs/private/file1.txt removed by reattach orphans
+- Path: / [type: dir] with parent  (from replica: ea7ee9e7-e660-4e23-987d-c3a10aad27d4) Name: root
+  - Path: /home [type: dir] with parent / (from replica: ea7ee9e7-e660-4e23-987d-c3a10aad27d4) Name: home
+    - Path: /home/docs [type: dir] with parent /home (from replica: ea7ee9e7-e660-4e23-987d-c3a10aad27d4) Name: docs
+  - Path: /user [type: dir] with parent / (from replica: 3a1eb291-0d89-45a0-b3ab-d788a63b367d) Name: user
