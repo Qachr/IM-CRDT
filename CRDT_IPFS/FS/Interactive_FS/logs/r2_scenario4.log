@@ -1,0 +1,12 @@
+Enter command (add <path> <type> | remove <path> <type> | print): /user user / dir
+Enter command (add <path> <type> | remove <path> <type> | print): /home/docs/private private /home/docs dir
+Enter command (add <path> <type> | remove <path> <type> | print): Enter command (add <path> <type> | remove <path> <type> | print): Orphan node policy: compact
+
+------------------FINAL TREE---------------
+[MERGE] Merged with peer
+{/home/docs/private private /home/docs dir <nil> 3 r2} true
+- / [dir] (from r2) root 
+  - /user [dir] (from r2) user /
+  - /home [dir] (from r1) home /
+    - /home/docs [dir] (from r1) docs /home
+      - /home/docs/file1.txt [file] (from r1) file1.txt /home/docs

@@ -1,0 +1,12 @@
+Enter command (add <path> <type> | remove <path> <type> | print): /home home / dir
+Enter command (add <path> <type> | remove <path> <type> | print): /home/docs docs /home dir
+Enter command (add <path> <type> | remove <path> <type> | print): /home/docs/private/file1.txt file1.txt /home/docs/private file
+Enter command (add <path> <type> | remove <path> <type> | print): Default orphan node policy: skip
+
+------------------FINAL TREE---------------
+[MERGE] Merged with peer
+/home/docs/private/file1.txt removed by reattach orphans
+- / [dir] (from r2) root 
+  - /home [dir] (from r1) home /
+    - /home/docs [dir] (from r1) docs /home
+  - /user [dir] (from r2) user /
